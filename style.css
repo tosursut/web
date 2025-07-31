@@ -1,0 +1,253 @@
+/* Genel Stil Ayarları */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f7f2; /* Krem rengi arka plan */
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+/* Navigasyon ve Header */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+nav .logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4b8a4f; /* Yeşil marka rengi */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+    color: #4b8a4f;
+}
+
+/* Ana Sayfa (Hero) Bölümü */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 70vh;
+    background: #eef5e7; /* Açık yeşil arka plan */
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #4b8a4f;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.button {
+    background-color: #4b8a4f;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #386b3b;
+    transform: translateY(-3px);
+}
+
+/* Ürünler Bölümü */
+.products {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4b8a4f;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card img:hover {
+    transform: scale(1.05); /* Resim üzerine gelince hafif büyütme */
+}
+
+.product-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-button {
+    background-color: #4b8a4f;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product-button:hover {
+    background-color: #386b3b;
+}
+
+/* Hakkımızda Bölümü */
+.about-us {
+    background: #eef5e7;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4b8a4f;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-us img {
+    margin-top: 2rem;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-us img:hover {
+    transform: scale(1.02); /* Resim üzerine gelince hafif büyütme */
+}
+
+/* İletişim Bölümü */
+.contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4b8a4f;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
