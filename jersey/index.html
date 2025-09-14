@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toşur Dede Çiftliği - Hayvan Refahı ve Jersey İnekleri</title>
+    <link rel="icon" type="image/jpeg" href="../favicon.jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .features-title {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .features-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .feature {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #4ecdc4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .feature h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature h3::before {
+            content: '🐄';
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .feature p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: #2c3e50;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .contact-info strong {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #2d3436;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .feature {
+                padding: 20px;
+            }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            display: none;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-top.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🐄 Toşur Dede Çiftliği</h1>
+            <p>Hayvan Refahı: Önceliğimiz Mutlu ve Sağlıklı Jersey İnekleri</p>
+        </header>
+
+        <main class="content">
+            <div class="intro">
+                <p>Toşur Dede Çiftliği olarak, <span class="highlight">Jersey ineklerimizin refahını her şeyin üstünde tutuyoruz</span>. Hayvan refahı, yalnızca etik bir sorumluluk değil, aynı zamanda üstün kaliteli süt ve ürünlerin temelini oluşturur. Mutlu inekler, daha sağlıklı süt üretir – bu yüzden çiftliğimizde, uluslararası standartlara dayalı en iyi uygulamaları hayata geçiriyoruz. Jersey ineklerinin özel ihtiyaçlarını göz önünde bulundurarak, onların doğal davranışlarını teşvik eden, stressiz bir ortam yaratıyoruz.</p>
+            </div>
+
+            <h2 class="features-title">Çiftliğimizdeki Hayvan Refahı Özellikleri</h2>
+
+            <div class="feature">
+                <h3>Rahat ve Geniş Barınaklar</h3>
+                <p>İneklerimize yeterli alan sağlıyoruz – her ineğe özel cubicle veya stall'lar ile tüm grubun aynı anda yatabilmesini garanti ediyoruz. İyi ventilasyon, düşük nem ve kalabalık olmayan koşullar, yaralanma ve hastalık riskini minimize eder. Bu, Jersey ineklerinin küçük boyutlu yapılarına uygun şekilde tasarlandı.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Doğal Beslenme ve Su Erişimi</h3>
+                <p>İneklerimizi vücut büyümesi, gebelik durumu ve süt üretimine göre uyarlanmış, protein ve enerji zengini bir diyetle besliyoruz. Her gün yeterli yem ve temiz su sağlıyoruz, açlık veya susuzluktan özgür olmalarını garanti ediyoruz. Jersey ineklerinin verimli metabolizmalarını destekleyen besin takviyeleriyle, enerji seviyelerini koruyoruz.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Düzenli Sağlık Kontrolleri ve Veteriner Bakımı</h3>
+                <p>Günlük sağım rutiniyle meme sağlığını koruyoruz, düzenli ayak bakımı (hood trimming) ve veteriner ziyaretleriyle hastalıkları erken teşhis ediyoruz. Hasta veya yaralı hayvanları izole ederek, sürü sağlığını güvence altına alıyoruz. Jersey buzağılarının hafif doğum ağırlığına özel ekstra bakım sağlıyoruz, onları güçlü ve sağlıklı yetiştiriyoruz.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Stres Azaltma ve Doğal Davranış Teşviki</h3>
+                <p>İneklerimizi sakin bir yaklaşımla yönetiyoruz – alıştırma seansları, kaşıntı fırçaları (cow brushes) ve serbest dolaşım alanlarıyla doğal davranışlarını (otlama, sosyalleşme) teşvik ediyoruz. Yeni doğuran annelerin koruma içgüdüsüne saygı göstererek, stressiz bir ortam yaratıyoruz. Bu uygulamalar, kalp ritmi gibi göstergeleri olumlu etkiliyor.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Uluslararası Standartlara Uyum</h3>
+                <p>Çiftliğimiz, Code of Practice for the Care and Handling of Dairy Cattle ve benzeri rehberlere dayalı çalışıyor. FARM programı gibi değerlendirme araçlarıyla sürekli iyileştirme yapıyoruz, hayvan refahını <span class="highlight">beş özgürlük prensibiyle</span> (açlık, rahatsızlık, acı, doğal davranış ve stres özgürlüğü) güvence altına alıyoruz.</p>
+            </div>
+        </main>
+
+        <section class="contact-section">
+            <h2>🌟 Bizimle İletişime Geçin</h2>
+            <p>Bu özellikler, Jersey ineklerimizin mutlu olmasını sağlarken, size daha besleyici ve lezzetli süt ürünleri sunmamıza olanak tanır. Toşur Dede Çiftliği'nde, hayvan refahı bir vaat değil, günlük pratiğimizdir.</p>
+            <p><strong>Sağlığınız ve doğa için en iyisini seçin – bizimle iletişime geçin ve farkı keşfedin!</strong></p>
+            
+            <div class="contact-info">
+                <strong>📧 İletişim: ercanaltinoz@gmail.com</strong><br>
+                <strong>🏢 Çiftlik: Toşur Dede Çiftliği</strong>
+            </div>
+        </section>
+    </div>
+
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll to top functionality
+        window.onscroll = function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
